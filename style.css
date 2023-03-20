@@ -12,9 +12,26 @@
     height: 12vh;
     margin: auto;
 }
-.navbar .logo{
-    font-size: 2rem;
+
+.logo:hover
+{
+    cursor: grab; 
+margin: 5px ;
+padding: 5px;
 }
+
+a:hover
+{
+font-weight:bolder;
+margin: 5px ;
+padding: 5px;
+cursor: grab; 
+font-size: 30px;
+}
+
+/* .navbar .logo{
+    font-size: 2rem;
+} */
 .navbar .navlist{
     display: flex;
     gap: 2rem;
@@ -246,4 +263,19 @@
     font-size: .9rem;
     text-align: center;
     margin-top: 7rem;
+}
+
+.robotpic{
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#eclips{
+   align-items:center;
+   justify-content:center;  
+   margin-top: 18px;
+   margin-left: 100px;
+   box-shadow: 8px 8px 8px black;
 }

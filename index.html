@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robotic</title>
     <link rel="stylesheet" href="style.css">
-   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="logo">Logo</div>
+            <div class="logo"><img src="/image_processing20210907-13511-1juj33d.gif"  width="100px" height="80px"></div>
             <ul class="navlist">
                 <li><a href="about.html" target="_blank" >About</a></li>
                 <li><a href="robots.html" target="_blank">Robots</a></li>
@@ -21,7 +21,9 @@
             </ul>
         </div>
         <section class="hero">
-            <div class="content">
+            <div class="content"  data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
                 <h1>We bring robots to life.</h1>
                 <p>Hanson Robotics is an AI and robotics company
                    dedicated to creating socially intelligent
@@ -30,7 +32,9 @@
         </section>
     </div>
     <section class="Choose">
-        <div class="choose__content">
+        <div class="choose__content"  data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <h1>Why human-like robots?</h1>
             <p>Robots will soon be everywhere. How can we nurture
                  them to be our friends and useful collaborators?
@@ -42,7 +46,7 @@
     </section>
     <section class="interface">
         <div class="main__interface">
-            <div class="interface__content">
+            <div class="interface__content" data-aos="flip-down">
                 <h1>Hanson AI</h1>
                 <h3>Developing Meaningful AI Interactions</h3>
                 <p>Robots will soon be everywhere. How can we nurture
@@ -52,12 +56,14 @@
                      connect deeply and meaningfully with humans.</p>
                 <button>Hanson AI</button>
             </div>
-            <div class="image"></div>
+            <div id="gif" data-aos="zoom-in"><img src="/robotgif2.gif" width="400px" height="350px"  ></div>
         </div>
     </section>
     <section class="Robotics">
-        <div class="main__Robotics">
-            <div class="image"></div>
+        <div class="main__Robotics" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+            <div class="image"><img src="/png-transparent-robotics-science-fiction-technology-robot-electronics-computer-science-extraterrestrial-life-removebg-preview (1).png" height="350px"></div>
             <div class="Robotics__content">
                 <h1>Hanson AI</h1>
                 <h3>Developing Meaningful AI Interactions</h3>
@@ -73,7 +79,7 @@
     <section class="News">
         <div class="News__content">
             <h1>Latest News</h1>
-            <div class="slider"></div>
+            <div class="slider"><img src="/EllipticalCostlyChrysomelid-size_restricted.gif" width="500px" height="=500px" id="eclips"></div>
         </div>
     </section>
     <section class="news__letter">
@@ -107,5 +113,11 @@
         </div>
         <p>COPYRIGHT <span>&copy;</span> 2023. HANSON ROBOTICS LTD.</p>
     </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
