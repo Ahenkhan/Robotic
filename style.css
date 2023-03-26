@@ -8,46 +8,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 100%;
     height: 12vh;
     margin: auto;
 }
-
+/* adjust navbar */
+.navbar{ 
+z-index: 999;
+position: fixed;
+background-color: #ffffff;
+}
 .logo:hover
 {
     cursor: grab; 
 margin: 5px ;
 padding: 5px;
 }
-
+/*decrease font size */
 a:hover
 {
 font-weight:bolder;
 margin: 5px ;
-padding: 5px;
+padding: 3px;
 cursor: grab; 
-font-size: 30px;
+font-size: 16px;
 }
-
-/* .navbar .logo{
+.navbar .logo{
     font-size: 2rem;
-} */
+}
 .navbar .navlist{
     display: flex;
     gap: 2rem;
-
 }
 .navlist li{
     list-style: none;
 }
 .navlist a{
     text-transform: uppercase;
-    color: black;
+    color: rgb(61, 60, 60);
     text-decoration: none;
 }
+/* change height due to sticky navbar from 75vh to 130vh */
 .container .hero{
     width: 100%;
-    height: 75vh;
+    height: 130vh;
     background-image: url("https://images.pexels.com/photos/8294594/pexels-photo-8294594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-position: center;
     background-size: cover;
@@ -114,12 +118,39 @@ font-size: 30px;
 .main__interface .image{
     background-color: white;
     width: 30rem;
-    height: 30rem;
+}
+/* editing img border and ::shadow */
+#gif img{
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgb(94, 188, 243);
 }
 .interface .interface__content{
     max-width: 33rem;
     color: white;
 }
+/* modifying .interface__content button and text */
+.interface__content h1 {
+    font-size: 2rem;
+}
+.interface__content h3 {
+        font-size: 1.5rem;
+}
+.interface__content p{
+        font-size: 1rem;
+        margin: .3rem 0 1rem;
+}
+.interface__content button {
+        background-color: rgba(46, 46, 46, 0.836);
+        padding: 1.3rem 2rem;
+        border-radius: 3rem;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        margin-top: 1.7rem;
+        box-shadow: rgba(142, 142, 153, 0.2) 0px 7px 29px 0px;
+}
+
+
 .Robotics{
     background-color: #F3F3F3;
     width: 100%;
@@ -139,9 +170,32 @@ font-size: 30px;
     width: 30rem;
     height: 40rem;
 }
+/* modified padding and font-size and button*/
 .Robotics .Robotics__content{
     max-width: 33rem;
     color: rgb(0, 0, 0);
+    padding: 0 4rem;
+}
+
+.Robotics__content h1 {
+font-size: 2rem;
+}
+.Robotics__content h3 {
+    font-size: 1.5rem;
+}
+.Robotics__content p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+.Robotics__content button {
+    background-color: black;
+    padding: 1.3rem 2rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    margin-top: 1.7rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .News{
     background-color: black;
@@ -192,12 +246,11 @@ font-size: 30px;
     font-size: 1rem;
     color: black;
 }
-
 .news__letter__content button{
     background-color: rgb(152, 35, 35);
     padding: 1rem 2rem;
     border-radius: 3rem;
-    color: white;
+    color: rgb(248, 243, 243);
     font-size: 1rem;
     border: none;
     margin-top: 1.7rem;
@@ -207,6 +260,7 @@ font-size: 30px;
 .footer{
     background-color: black;
     padding: 3rem 0;
+    background-size: cover;
 }
 .footer__content{
     display: flex;
@@ -219,6 +273,7 @@ font-size: 30px;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.4rem;
+    padding: 1%;
 }
 
 .resource h1{
@@ -233,14 +288,13 @@ font-size: 30px;
     border-radius: 5rem;
     padding-left: 1.5rem;
     font-size: 1rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-
 .resource button{
     background-color: rgb(152, 35, 35);
     padding: 1rem 2rem;
     border-radius: 3rem;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     border: none;
     text-transform: uppercase;
@@ -279,3 +333,148 @@ font-size: 30px;
    margin-left: 100px;
    box-shadow: 8px 8px 8px black;
 }
+
+/* Adding hover to buttons */
+.news__letter__content button:hover{
+    font-size: 17px;
+    background-color: rgb(156, 50, 40);
+}
+.resource button:hover{
+    font-size: 17px;
+    background-color: rgb(156, 50, 40);
+}
+.Robotics__content button:hover{
+font-size: 17px;
+background-color: rgba(0, 0, 0, 0.753);
+}
+.choose__content button:hover{
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.753);
+    }
+.interface__content button:hover{
+    font-size: 17px;
+    background-color: rgb(25, 26, 26);
+ 
+} 
+
+/* adding media query to change text on web to icon on mob */
+@media (max-width:768px){
+    #webnav{ 
+        display: none;
+    }
+   }   
+   @media (min-width:769px){
+    #mobnav{ 
+        visibility: hidden;
+    }
+   }   
+   @media (max-height:600px){
+    .logo img{
+        width: 85px;
+        height: auto;
+    }
+   }
+   @media (max-width:481px){
+     #mobnav img{
+        width: 18px;
+        height: auto;
+    }
+    .hero h1{
+        font-size: 40px;
+        gap: 2px;
+    }
+    .hero p{
+        font-size: 10px;
+        gap: 1px
+    }
+    .main__Robotics .image{
+        width: 4rem;
+    }
+    .Robotics__content h1 {
+        font-size: 20px;
+    }
+    }
+   @media (max-width:769px) and (min-width:482px){
+    .hero h1{
+        font-size: 30px;
+    }
+    .hero p{
+        font-size: 15px;
+    }
+    .main__Robotics .image{
+        width: 4rem;
+    }
+    .Robotics__content h1 {
+        font-size: 20px;
+    }
+   }
+   @media (max-width:769px) and (min-width:482px){
+    #gif img{
+        width: 20rem;
+        height: 20rem;
+        margin-top: 7%;
+    }
+
+.main__interface{
+    -webkit-flex-wrap: wrap;   
+}
+   }
+   @media (max-width:481px) and (min-width:0px){
+   #gif img{
+    width: 17rem;
+    height: 17rem;
+    margin-top: 7%;
+}
+.main__interface{
+    -webkit-flex-wrap: wrap;   
+}
+   }
+   @media (max-width:890px) and (min-width:0px){
+    .Robotics__content{
+    margin-top:75%;
+    margin-bottom:5%;
+   }
+    .Robotics__content h1{
+    font-size: 27px;
+ }
+    .Robotics__content h3{
+    font-size: 25px;
+}
+.Robotics__content p{
+    font-size: 18px;
+}
+.main__Robotics .image{
+width:50px;
+}
+.interface__content{
+    margin-right: 2%;
+}
+.interface__content h1{
+    font-size: 27px;
+}
+.interface__content h3{
+    font-size: 25px;
+}
+.interface__content p{
+    font-size: 18px;
+}
+.News__content .slider{
+    width: 35rem;
+}
+.slider #eclips{
+    width: 30rem;
+    margin-left: 40px;
+}
+.resource{
+    width: 100%;
+}
+.footer__content{
+    -webkit-flex-wrap: wrap;
+}
+.footer__content .resource{
+    gap: 0.9rem;
+}
+.interface__content button{
+    font-size: 13px;
+}
+   }
